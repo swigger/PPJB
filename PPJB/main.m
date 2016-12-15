@@ -15,7 +15,7 @@ getcwd(char *buf, size_t size);
 
 int main(int argc, char * argv[]) {
     char buf[1024];
-    printf("%s\n", getcwd(buf, sizeof(buf)));
+    printf("==> %s\n", getcwd(buf, sizeof(buf)));
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

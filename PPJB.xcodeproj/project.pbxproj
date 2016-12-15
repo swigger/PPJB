@@ -26,6 +26,7 @@
 		794C444B1E02EE78006B15D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		794C444D1E02EE78006B15D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		794C44501E02EE78006B15D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		794C44681E02FCE1006B15D6 /* aa.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = aa.sh; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		794C443F1E02EE78006B15D6 /* PPJB */ = {
 			isa = PBXGroup;
 			children = (
+				794C44681E02FCE1006B15D6 /* aa.sh */,
 				794C44441E02EE78006B15D6 /* AppDelegate.h */,
 				794C44451E02EE78006B15D6 /* AppDelegate.m */,
 				794C44471E02EE78006B15D6 /* ViewController.h */,
@@ -89,6 +91,7 @@
 				794C44391E02EE77006B15D6 /* Sources */,
 				794C443A1E02EE77006B15D6 /* Frameworks */,
 				794C443B1E02EE77006B15D6 /* Resources */,
+				794C44671E02FA4D006B15D6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -144,6 +147,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		794C44671E02FA4D006B15D6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = ./aa.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		794C44391E02EE77006B15D6 /* Sources */ = {
