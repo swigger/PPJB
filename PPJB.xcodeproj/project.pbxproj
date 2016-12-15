@@ -13,18 +13,7 @@
 		794C444C1E02EE78006B15D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794C444A1E02EE78006B15D6 /* Main.storyboard */; };
 		794C444E1E02EE78006B15D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794C444D1E02EE78006B15D6 /* Images.xcassets */; };
 		794C44511E02EE78006B15D6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794C444F1E02EE78006B15D6 /* LaunchScreen.xib */; };
-		794C445D1E02EE78006B15D6 /* PPJBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 794C445C1E02EE78006B15D6 /* PPJBTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		794C44571E02EE78006B15D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 794C44351E02EE77006B15D6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 794C443C1E02EE77006B15D6;
-			remoteInfo = PPJB;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		794C443D1E02EE78006B15D6 /* PPJB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPJB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +26,10 @@
 		794C444B1E02EE78006B15D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		794C444D1E02EE78006B15D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		794C44501E02EE78006B15D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		794C44561E02EE78006B15D6 /* PPJBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPJBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		794C445B1E02EE78006B15D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		794C445C1E02EE78006B15D6 /* PPJBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPJBTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		794C443A1E02EE77006B15D6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		794C44531E02EE78006B15D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				794C443F1E02EE78006B15D6 /* PPJB */,
-				794C44591E02EE78006B15D6 /* PPJBTests */,
 				794C443E1E02EE78006B15D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				794C443D1E02EE78006B15D6 /* PPJB.app */,
-				794C44561E02EE78006B15D6 /* PPJBTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,23 +79,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		794C44591E02EE78006B15D6 /* PPJBTests */ = {
-			isa = PBXGroup;
-			children = (
-				794C445C1E02EE78006B15D6 /* PPJBTests.m */,
-				794C445A1E02EE78006B15D6 /* Supporting Files */,
-			);
-			path = PPJBTests;
-			sourceTree = "<group>";
-		};
-		794C445A1E02EE78006B15D6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				794C445B1E02EE78006B15D6 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,24 +99,6 @@
 			productReference = 794C443D1E02EE78006B15D6 /* PPJB.app */;
 			productType = "com.apple.product-type.application";
 		};
-		794C44551E02EE78006B15D6 /* PPJBTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 794C44631E02EE78006B15D6 /* Build configuration list for PBXNativeTarget "PPJBTests" */;
-			buildPhases = (
-				794C44521E02EE78006B15D6 /* Sources */,
-				794C44531E02EE78006B15D6 /* Frameworks */,
-				794C44541E02EE78006B15D6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				794C44581E02EE78006B15D6 /* PBXTargetDependency */,
-			);
-			name = PPJBTests;
-			productName = PPJBTests;
-			productReference = 794C44561E02EE78006B15D6 /* PPJBTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +110,7 @@
 				TargetAttributes = {
 					794C443C1E02EE77006B15D6 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					794C44551E02EE78006B15D6 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 794C443C1E02EE77006B15D6;
+						DevelopmentTeam = H2JE2CWJS7;
 					};
 				};
 			};
@@ -189,7 +128,6 @@
 			projectRoot = "";
 			targets = (
 				794C443C1E02EE77006B15D6 /* PPJB */,
-				794C44551E02EE78006B15D6 /* PPJBTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,13 +140,6 @@
 				794C444C1E02EE78006B15D6 /* Main.storyboard in Resources */,
 				794C44511E02EE78006B15D6 /* LaunchScreen.xib in Resources */,
 				794C444E1E02EE78006B15D6 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		794C44541E02EE78006B15D6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +156,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		794C44521E02EE78006B15D6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				794C445D1E02EE78006B15D6 /* PPJBTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		794C44581E02EE78006B15D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 794C443C1E02EE77006B15D6 /* PPJB */;
-			targetProxy = 794C44571E02EE78006B15D6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		794C444A1E02EE78006B15D6 /* Main.storyboard */ = {
@@ -347,9 +262,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PPJB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,43 +275,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PPJB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		794C44641E02EE78006B15D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PPJBTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PPJB.app/PPJB";
-			};
-			name = Debug;
-		};
-		794C44651E02EE78006B15D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PPJBTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PPJB.app/PPJB";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,14 +303,7 @@
 				794C44621E02EE78006B15D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		794C44631E02EE78006B15D6 /* Build configuration list for PBXNativeTarget "PPJBTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				794C44641E02EE78006B15D6 /* Debug */,
-				794C44651E02EE78006B15D6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
