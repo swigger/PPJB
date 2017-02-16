@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<title>PP助手DEB安装器</title>
+	<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="landscape">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="landscape">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+	<link rel="stylesheet" type="text/css" href="http://z.25pp.com/cydia_installer/css/cydia.css?v=1000">
+</head>
+<body>
+	<header>
+		<img src="http://z.25pp.com/cydia_installer/images/cydia/banner.jpg" alt="尽享越狱个性体验" />
+		<p>
+			<a href="javascript:void(0);" onclick="eventually(installDeb);">立即安装</a>
+		</p>
+	</header>
+	<article>
+		<dl>
+			<dd>
+				<i class="icon-app"></i>
+				<p>海量应用，免费挑选</p>
+			</dd>
+			<dd>
+				<i class="icon-gift"></i>
+				<p>游戏礼包，抢先获取</p>
+			</dd>
+		</dl>
+		<dl>
+			<dd>
+				<i class="icon-search"></i>
+				<p>智能搜索，一搜即达</p>
+			</dd>
+			<dd>
+				<i class="icon-setting"></i>
+				<p>手机管理，得心应手</p>
+			</dd>
+		</dl>
+	</article>
+	<script type="text/javascript">
+        //deb包ID
+        var identifier = "com.teiron.pphelperns";
+        //打开地址
+        var myUrl = "com.teiron.pphelperns://";
+        //deb下载源
+        var mySource = "http://apt.25pp.com/";
+        //名称
+        var ppName = "PP助手";
+        
+        var openFlag = false;
+        //添加源
+        function addSource() {
+            try{
+                if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                    cydia.addTrivialSource(mySource);
+                    cydia.refreshSources();
+                    window.setTimeout(function(){cydia.unload();}, 0);
+                }
+            }catch(e){
+                
+            }
+        }
+        //安装deb包
+        function installDeb() {
+            try{
+                openFlag = true;
+                if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                    // 源
+                    var isAdded = false;
+                    var sources = cydia.getAllSources();
+                    for (var source in sources) {
+                        source = sources[source];
+                        var rooturi = source.rooturi;
+                        if (rooturi == mySource) {
+                            isAdded = true;
+                            break;
+                        }
+                    }
+                    if (!isAdded) {
+                        addSource();
+                    }
+                }
+            }catch(e){
+                
+            }
+            try{
+                if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                    var package = cydia.getPackageById(identifier);
+                    if (package != null) {
+                        document.title = "安装PP助手";
+                        cydia.installPackages([package]);
+                    }else{
+                        cydia.refreshSources();
+                    }
+                }
+            }catch(e){
+                
+            }
+        }
+        //延迟执行函数
+        function eventually(f) {
+            setTimeout(f, 500);
+        }
+
+        try{
+            document.addEventListener("CydiaReloadData",function(){
+                    // 检测已安装
+                    var packages = cydia.getInstalledPackages();
+                    for (var pk in packages) {
+                    pk = packages[pk];
+                    if (pk.getField("name").indexOf(ppName)>-1) {
+                      window.setTimeout(function(){window.open(myUrl);}, 1000);
+                      return;
+                    }
+                  }
+             });
+            document.addEventListener("CydiaViewDidAppear",function(){
+                    if(openFlag){
+                        return;
+                   }
+                   openFlag = true;
+                   var isAdded = false;
+                   var sources = cydia.getAllSources();
+                   for (var source in sources) {
+                   source = sources[source];
+                   var rooturi = source.rooturi;
+                   if (rooturi == mySource) {
+                   isAdded = true;
+                   break;
+                   }
+                   }
+                   if (isAdded) {
+                    installDeb();
+                   }
+             });
+           
+            
+           setTimeout(function(){
+                 if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                    // 源
+                    var isAdded = false;
+                    var sources = cydia.getAllSources();
+                    for (var source in sources) {
+                    source = sources[source];
+                    var rooturi = source.rooturi;
+                    if (rooturi == mySource) {
+                        isAdded = true;
+                        break;
+                    }
+                 }
+                 if (isAdded) {
+                    installDeb();
+                    // 刷新源
+                    //	cydia.refreshSources();
+                    window.setTimeout(function(){cydia.unload();}, 0);
+                        } else {
+                            addSource();
+                        }
+                      }
+                }, 0);
+        }catch(e){
+            
+        }
+    </script>
+</body>
+</html>
