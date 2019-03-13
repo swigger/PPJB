@@ -30,7 +30,7 @@ cd $NAME.app
 DESTP=`pwd`
 
 rm -fr _CodeSignature
-rm -fr *.mobileprovision
+# rm -fr *.mobileprovision
 # rm -fr PkgInfo
 
 for i in $SRCIPD/Payload/$SRCNAME.app/* ; do
